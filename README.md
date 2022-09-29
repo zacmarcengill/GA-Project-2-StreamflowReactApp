@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Streamflow React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## App Description:
 
-## Available Scripts
+A React webapp that retrieves up-to-date streamflow data via API from USGS (U.S. Geological Survey) for the purpose of planning fishing trips and other stream related activities. App will also feature an interactive map of the streamflow site location.
 
-In the project directory, you can run:
+---Future Embedded App Screenshot---
 
-### `npm start`
+## Technologies Used:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- CSS
+- HTML
+- Javascript
+- React
+- REST/JSON API
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation Instructions:
 
-### `npm test`
+Find the "About" section on this repo and click the link. This will take you to the deployed site for this app. No installation required.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## User Stories:
 
-### `npm run build`
+- As a user, I need to recieve up-to-date and realtime streamflow data to prepare for my fishing trip and to ensure the river or stream will be save to fish on any given day.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- As a user, I would like to select different streams in my location.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- As a user, I would like to understand where the information is coming from so I know whether I can trust it.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- As a user, I would like the app to be easy to use and the data easy to understand upon first using the app.
 
-### `npm run eject`
+## Wireframe:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FzUfDoRcZGWN8oO0jZrr2dZ%2FUntitled%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Unsolved Problems:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- None.
