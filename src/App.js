@@ -3,9 +3,9 @@ import './App.css';
 import Header from './Header';
 import SiteSelect from './SiteSelect';
 
-function App() {
+function App(event) {
 	return (
-		<header class='header-container'>
+		<header className='header-container'>
 			<Header />
 			<SiteSelect value='' />
 		</header>
