@@ -38,6 +38,8 @@ Find the "About" section on this repo and click the link. This will take you to 
 
 - As a user, I would like a up-to-date fishing report for each location.
 
+- As a user, I would like to get an alert on my phone (alert from app or alert from created calander event) when the streamflow and river generation levels change.
+
 ## Wireframe:
 
 ![](/images/streamflow-react-app-wireframe.png)
@@ -54,6 +56,28 @@ API JSON Example: https://waterservices.usgs.gov/nwis/iv/?format=json&sites=0342
   - Input.js (props)
   - Results.js (props)
 - About.js
+
+### MVP Goals:
+
+- React App scalable on iPhone, iPad, and Desktop.
+
+- Utilize API to pull in streamflow data.
+
+- Drop Down to select which stream you would like data from.
+
+- About page that describes what the app is, what the capabilities are and where the data is pulled from.
+
+### Stretch Goals
+
+- Map that shows streamflow site on map.
+
+- Make map interactive to show streamflow sites pinned. When pin is selected, data will be displayed in popup container.
+
+- Function to "star" or "favorite" locations for fast data access.
+
+- Up-to-date fishing report added to each streamflow site.
+
+- Alerts when the streamflow data changes.
 
 ## Unsolved Problems:
 
