@@ -11,7 +11,7 @@ function SiteSelect(props) {
 					<option value='03596000'>DUCK RIVER BELOW MANCHESTER, TN</option>
 				</select>
 			</label>
-			<input type='submit' value='Submit' />
+			
 		</form>
 	);
 }
