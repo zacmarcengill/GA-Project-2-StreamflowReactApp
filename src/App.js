@@ -22,7 +22,7 @@ function App() {
 		<>
 			<header className='header-container'>
 				<Header />
-				<SiteSelect setSite={setSite} />
+				<SiteSelect setSite={SiteSelect} />
 			</header>
 			<div>
 				<Results />
