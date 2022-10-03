@@ -3,18 +3,31 @@ import './App.css';
 import Header from './Header';
 import SiteSelect from './SiteSelect';
 import Results from './Results';
+import { useState } from 'react';
 
-function App(event) {
+function App() {
+	const [site, setSite] = useState('');
+	console.log(site);
+
+	// function handleSubmit(event) {
+	// 	event.preventDefault();
+	// 	getSite(searchSite);
+	// }
+
+	// function getSite(searchSite) {
+	// 	const searchOptions =
+	// }
+
 	return (
-		<div>
+		<>
 			<header className='header-container'>
 				<Header />
-				<SiteSelect value='' />
+				<SiteSelect setSite={setSite} />
 			</header>
-			<body>
+			<div>
 				<Results />
-			</body>
-		</div>
+			</div>
+		</>
 	);
 }
 
