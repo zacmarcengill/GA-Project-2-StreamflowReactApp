@@ -23,6 +23,10 @@ form {
 }
 
 .results {
-  text-align: center;
-  line-height: 300px;
+	text-align: center;
+	line-height: 300px;
+}
+
+.map-container {
+	height: 400px;
 }
