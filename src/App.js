@@ -22,10 +22,10 @@ function App() {
 		<>
 			<header className='header-container'>
 				<Header />
-				<SiteSelect setSite={SiteSelect} />
+				<SiteSelect  />
 			</header>
 			<div>
-				<Results />
+				<Results siteInfo={site}/>
 			</div>
 		</>
 	);

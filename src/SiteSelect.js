@@ -2,9 +2,9 @@ import { getSelectionRange } from '@testing-library/user-event/dist/utils';
 import React, { useState } from 'react';
 // import App from './App';
 
-function SiteSelect({ handleChange, handleSubmit }) {
+function SiteSelect() {
 	const [code, setCode] = useState('03424860');
-	console.log(code);
+	console.log('State Code: ' + code);
 
 	function handleChange(event) {
 		setCode(event.target.value);
@@ -12,17 +12,15 @@ function SiteSelect({ handleChange, handleSubmit }) {
 
 	function handleSubmit(event) {
 		event.preventDefault();
-		getSite(code);
+		getSite();
 	}
 
 	function getSite() {
-		// const urlString = {
-		// 	sites: '03424860',
-		// 	parameterCd: '00060',
-		// };
+		const urlString = {
+			sites: code,
+		};
 
-		const url =
-			'https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03424860&parameterCd=00060';
+		const url = `https://waterservices.usgs.gov/nwis/iv/?format=json&sites=${urlString.sites}`;
 
 		fetch(url)
 			.then((res) => {
