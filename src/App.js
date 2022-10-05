@@ -22,15 +22,9 @@ function App() {
 	const [site, setSite] = useState(initialState);
 
 	return (
-		<>
-			<header className='header-container'>
-				{/* <Header /> */}
-				{/* <SiteSelect site={site} setSite={setSite} /> */}
-			</header>
-			<div>
-				<Map site={site} />
-			</div>
-		</>
+		<div>
+			<Map site={site} setSite={setSite} />
+		</div>
 	);
 }
 
