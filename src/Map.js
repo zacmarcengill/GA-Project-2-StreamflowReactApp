@@ -63,8 +63,6 @@ function Map({ site, setSite }) {
 				<div>
 					Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
 				</div>
-			</div>
-			<div className='footer-container'>
 				<About />
 			</div>
 		</div>

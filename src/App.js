@@ -10,13 +10,13 @@ import About from './About';
 function App() {
 	const initialState = {
 		code: '03424860',
-		name: '',
-		latitude: '',
-		longitude: '',
-		streamflow: '',
-		unitCode: '',
-		variableDescription: '',
-		dateTime: '',
+		name: 'CANEY FORK AT STONEWALL',
+		latitude: '36.1861111',
+		longitude: '-85.9044444',
+		streamflow: '1380',
+		unitCode: 'ft3/s',
+		variableDescription: 'Discharge, cubic feet per second',
+		dateTime: '2022-10-05T17:30:00.000-05:00',
 	};
 
 	const [site, setSite] = useState(initialState);
