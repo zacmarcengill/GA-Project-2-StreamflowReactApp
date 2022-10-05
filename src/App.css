@@ -1,7 +1,7 @@
 .map-app-container {
 	display: grid;
 	grid-template-columns: 10px 1fr 1fr 1fr 10px;
-	grid-template-rows: 10px 1fr 1fr 1fr 10px;
+	grid-template-rows: 10px 1fr 1fr 1.1fr 10px;
 }
 
 .map-container {
