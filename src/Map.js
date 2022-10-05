@@ -1,12 +1,10 @@
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
-import SiteSelect from './SiteSelect';
-import Data from './Data';
 
 mapboxgl.accessToken =
 	'pk.eyJ1IjoiemFjbWFyY2VuZ2lsbCIsImEiOiJjbDh0ajN0czIwNXhpM3BwODYxbjYwbmhyIn0.odDnWTriSpnbJf3IE8vfrw';
 
-function Map() {
+function Map({ site }) {
 	const mapContainer = useRef(null);
 	const map = useRef(null);
 	const [lng, setLng] = useState(-86);
@@ -35,8 +33,15 @@ function Map() {
 	return (
 		<div className='map-container'>
 			<div ref={mapContainer} className='map' />
-			<div className='sidebar'>
-				Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
+			<div className='sidebar-container'>
+				<div>{site.name}</div>
+				<div>Site #: {site.code}</div>
+				<div>
+					Location: {site.latitude}, {site.longitude}
+				</div>
+				<div>
+					Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
+				</div>
 			</div>
 		</div>
 	);

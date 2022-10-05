@@ -27,7 +27,7 @@ function App() {
 				<SiteSelect site={site} setSite={setSite} />
 			</header>
 			<div>
-				<Map />
+				<Map site={site} />
 				<Data site={site} />
 			</div>
 		</>

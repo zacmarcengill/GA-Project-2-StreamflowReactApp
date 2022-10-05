@@ -34,7 +34,7 @@ form {
 	grid-row: 2;
 }
 
-.sidebar {
+.sidebar-container {
 	background-color: rgba(25, 53, 120, 0.8);
 	color: #fff;
 	padding: 6px 12px;
@@ -49,10 +49,8 @@ form {
 
 .data-container {
 	display: grid;
-	grid-template-columns: 5px 1fr 2fr 2fr 5px;
-	grid-template-rows: 5px 1fr 1fr 1fr 5px;
-	justify-self: auto;
-	/* align-content: space-between; */
+	grid-template-columns: 10px 220px 2fr 2fr 10px;
+	grid-template-rows: 5px 75px 75px 5px;
 }
 
 .site-image {
@@ -73,11 +71,6 @@ form {
 
 .site-code {
 	grid-row: 3;
-	grid-column: 3;
-}
-
-.site-location {
-	grid-row: 4;
 	grid-column: 3;
 }
 

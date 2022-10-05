@@ -33,8 +33,10 @@ function SiteSelect({ site, setSite }) {
 					name: res.value.timeSeries[0].sourceInfo.siteName,
 
 					latitude:
-						res.value.timeSeries[0].sourceInfo.geoLocation.geogLocation
-							.latitude,
+						Math.round(
+							res.value.timeSeries[0].sourceInfo.geoLocation.geogLocation
+								.latitude * 100
+						) / 100,
 
 					longitude:
 						res.value.timeSeries[0].sourceInfo.geoLocation.geogLocation

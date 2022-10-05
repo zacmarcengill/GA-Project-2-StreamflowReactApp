@@ -10,10 +10,15 @@ function Data({ site }) {
 				id='site-img'
 			/>
 			<h3 className='site-name'>{site.name}</h3>
-			<h3 className='site-code'>Site #: {site.code}</h3>
-			<h3 className='site-location'>
-				{site.code}/{site.latitude}, {site.longitude}
+			<h3 className='site-code'>
+				<div>
+					Site #: {site.code}
+					<br />
+					<br />
+					Location: {site.latitude}, {site.longitude}
+				</div>
 			</h3>
+			<h3 className='site-location'></h3>
 			<h3 className='streamflow'>
 				Streamflow:{' '}
 				{`${site.streamflow} ${site.unitCode}
