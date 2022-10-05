@@ -2,22 +2,21 @@ import { getSelectionRange } from '@testing-library/user-event/dist/utils';
 import React, { useState } from 'react';
 // import App from './App';
 
-function SiteSelect() {
-	const [code, setCode] = useState('03424860');
-	console.log('State Code: ' + code);
-
+function SiteSelect({ site, setSite }) {
 	function handleChange(event) {
-		setCode(event.target.value);
+		console.log('handleChange Ran!');
+		setSite({ ...site, code: event.target.value });
 	}
 
 	function handleSubmit(event) {
+		console.log('handleSubmit Ran!');
 		event.preventDefault();
 		getSite();
 	}
 
 	function getSite() {
 		const urlString = {
-			sites: code,
+			sites: site.code,
 		};
 
 		const url = `https://waterservices.usgs.gov/nwis/iv/?format=json&sites=${urlString.sites}`;
@@ -27,24 +26,35 @@ function SiteSelect() {
 				return res.json();
 			})
 			.then((res) => {
-				console.log(
-					'success!',
-					'Site Name: ' + res.value.timeSeries[0].sourceInfo.siteName,
-					'Site Code: ' + res.value.timeSeries[0].sourceInfo.siteCode[0].value,
-					'Streamflow ' +
-						'(' +
-						res.value.timeSeries[0].variable.variableDescription +
-						res.value.timeSeries[0].variable.unit.unitCode +
-						'): ' +
-						res.value.timeSeries[0].values[0].value[0].value,
-					res.value.timeSeries[0].values[0].value[0].dateTime
-				);
+				setSite({
+					...site,
+					code: res.value.timeSeries[0].sourceInfo.siteCode[0].value,
+
+					name: res.value.timeSeries[0].sourceInfo.siteName,
+
+					latitude:
+						res.value.timeSeries[0].sourceInfo.geoLocation.geogLocation
+							.latitude,
+
+					longitude:
+						res.value.timeSeries[0].sourceInfo.geoLocation.geogLocation
+							.longitude,
+
+					streamflow: res.value.timeSeries[0].values[0].value[0].value,
+
+					unitCode: res.value.timeSeries[0].variable.unit.unitCode,
+
+					variableDescription:
+						res.value.timeSeries[0].variable.variableDescription,
+
+					dateTime: res.value.timeSeries[0].values[0].value[0].dateTime,
+				});
+				console.log('Success! API date retrieved!');
 			})
 			.catch((err) => {
 				console.log('something went wrong...', err);
 			});
 	}
-	getSite();
 
 	return (
 		<form onSubmit={handleSubmit} className='form-container'>
@@ -56,6 +66,7 @@ function SiteSelect() {
 					<option value='03596000'>DUCK RIVER BELOW MANCHESTER, TN</option>
 				</select>
 			</label>
+			<button type='submit'>Submit</button>
 		</form>
 	);
 }

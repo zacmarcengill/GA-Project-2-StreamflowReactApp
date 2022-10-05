@@ -4,27 +4,31 @@ import './App.css';
 import Header from './Header';
 import SiteSelect from './SiteSelect';
 import Map from './Map';
-import Results from './Results';
+import Data from './Data';
 
 function App() {
-	const [site, setSite] = useState('');
-	console.log(site);
+	const initialState = {
+		code: '03424860',
+		name: '',
+		latitude: '',
+		longitude: '',
+		streamflow: '',
+		unitCode: '',
+		variableDescription: '',
+		dateTime: '',
+	};
+
+	const [site, setSite] = useState(initialState);
 
 	return (
 		<>
 			<header className='header-container'>
 				<Header />
-				<SiteSelect />
+				<SiteSelect site={site} setSite={setSite} />
 			</header>
 			<div>
 				<Map />
-			</div>
-			<div>
-				<img
-					src='https://media.defense.gov/2021/Jun/15/2002742197/-1/-1/0/210408-A-EO110-1050.JPG'
-					alt='' id='site-img'
-				/>
-				<Results />
+				<Data site={site} />
 			</div>
 		</>
 	);

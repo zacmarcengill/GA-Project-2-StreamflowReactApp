@@ -22,19 +22,71 @@ form {
 	background-color: white;
 }
 
-.results {
-	text-align: center;
-	line-height: 300px;
-}
-
 .map-container {
 	height: 400px;
+	display: grid;
+	grid-template-columns: 10px 1fr 10px;
+	grid-template-rows: 10px 1fr 10px;
 }
 
-#site-img {
+.map {
+	grid-column: 2;
+	grid-row: 2;
+}
+
+.sidebar {
+	background-color: rgba(25, 53, 120, 0.8);
+	color: #fff;
+	padding: 6px 12px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	z-index: 1;
+	position: absolute;
+	margin: 12px;
+	border-radius: 4px;
+	grid-column: 2 / span 5;
+	grid-row: 1;
+}
+
+.data-container {
+	display: grid;
+	grid-template-columns: 5px 1fr 2fr 2fr 5px;
+	grid-template-rows: 5px 1fr 1fr 1fr 5px;
+	justify-self: auto;
+	/* align-content: space-between; */
+}
+
+.site-image {
 	border: 1px solid grey;
-	border-radius: 2px;
+	border-radius: 5px;
 	padding: 5px;
 	margin: 20px;
 	width: 150px;
+	grid-column: 2;
+	grid-row: 2;
+	z-index: 1;
+}
+
+.site-name {
+	grid-row: 2;
+	grid-column: 3;
+}
+
+.site-code {
+	grid-row: 3;
+	grid-column: 3;
+}
+
+.site-location {
+	grid-row: 4;
+	grid-column: 3;
+}
+
+.streamflow {
+	grid-row: 2;
+	grid-column: 4;
+}
+
+.date-time {
+	grid-row: 3;
+	grid-column: 4;
 }

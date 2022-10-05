@@ -1,5 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
+import SiteSelect from './SiteSelect';
+import Data from './Data';
 
 mapboxgl.accessToken =
 	'pk.eyJ1IjoiemFjbWFyY2VuZ2lsbCIsImEiOiJjbDh0ajN0czIwNXhpM3BwODYxbjYwbmhyIn0.odDnWTriSpnbJf3IE8vfrw';
@@ -15,7 +17,7 @@ function Map() {
 		if (map.current) return; // initialize map only once
 		map.current = new mapboxgl.Map({
 			container: mapContainer.current,
-			style: 'mapbox://styles/mapbox/streets-v11',
+			style: 'mapbox://styles/mapbox/outdoors-v11',
 			center: [lng, lat],
 			zoom: zoom,
 		});
@@ -31,8 +33,11 @@ function Map() {
 	});
 
 	return (
-		<div className='map'>
-			<div ref={mapContainer} className='map-container' />
+		<div className='map-container'>
+			<div ref={mapContainer} className='map' />
+			<div className='sidebar'>
+				Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
+			</div>
 		</div>
 	);
 }
