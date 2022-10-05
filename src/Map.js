@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import mapboxgl from '!mapbox-gl';
+import mapboxgl from 'mapbox-gl';
 import Header from './Header';
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
