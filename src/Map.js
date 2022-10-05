@@ -5,7 +5,6 @@ import About from './About';
 import SiteSelect from './SiteSelect';
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
-// console.log(process.env.REACT_APP_MAPBOX_TOKEN);
 
 function Map({ site, setSite }) {
 	const mapContainer = useRef(null);
@@ -37,7 +36,7 @@ function Map({ site, setSite }) {
 		<div className='map-app-container'>
 			<div ref={mapContainer} className='map-container' />
 			<div className='header-container'>
-				<h1 className='header'>Streamflow</h1>
+				<Header />
 			</div>
 			<div className='form-container'>
 				<SiteSelect site={site} setSite={setSite} />

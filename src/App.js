@@ -1,11 +1,6 @@
-import React, { useRef, useEffect, useState } from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
-import Header from './Header';
-import SiteSelect from './SiteSelect';
 import Map from './Map';
-import Data from './Data';
-import About from './About';
 
 function App() {
 	const initialState = {
