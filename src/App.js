@@ -24,12 +24,11 @@ function App() {
 	return (
 		<>
 			<header className='header-container'>
-				<Header />
-				<SiteSelect site={site} setSite={setSite} />
+				{/* <Header /> */}
+				{/* <SiteSelect site={site} setSite={setSite} /> */}
 			</header>
 			<div>
 				<Map site={site} />
-				<About />
 			</div>
 		</>
 	);

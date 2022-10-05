@@ -1,11 +1,13 @@
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import Header from './Header';
+import About from './About';
+import SiteSelect from './SiteSelect';
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
 // console.log(process.env.REACT_APP_MAPBOX_TOKEN);
 
-function Map({ site }) {
+function Map({ site, setSite }) {
 	const mapContainer = useRef(null);
 	const map = useRef(null);
 	const [lng, setLng] = useState(-86);
@@ -32,8 +34,14 @@ function Map({ site }) {
 	});
 
 	return (
-		<div>
+		<div className='map-app-container'>
 			<div ref={mapContainer} className='map-container' />
+			<div className='header-container'>
+				<h1 className='header'>Streamflow</h1>
+			</div>
+			<div className='form-container'>
+				<SiteSelect site={site} setSite={setSite} />
+			</div>
 			<div className='sidebar'>
 				<img
 					className='site-image'
@@ -55,6 +63,9 @@ function Map({ site }) {
 				<div>
 					Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
 				</div>
+			</div>
+			<div className='footer-container'>
+				<About />
 			</div>
 		</div>
 	);
