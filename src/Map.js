@@ -2,8 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import Header from './Header';
 
-mapboxgl.accessToken =
-	'pk.eyJ1IjoiemFjbWFyY2VuZ2lsbCIsImEiOiJjbDh0ajN0czIwNXhpM3BwODYxbjYwbmhyIn0.odDnWTriSpnbJf3IE8vfrw';
+mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
 
 function Map({ site }) {
 	const mapContainer = useRef(null);
