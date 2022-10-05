@@ -46,7 +46,7 @@ function Map({ site }) {
 				<div>
 					Streamflow:
 					{`${site.streamflow} ${site.unitCode}
-				${site.variableDescription}`}
+					${site.variableDescription}`}
 				</div>
 				<div>Date/Time: {site.dateTime}</div>
 				<div>
