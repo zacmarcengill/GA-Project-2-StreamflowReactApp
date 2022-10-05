@@ -1,6 +1,4 @@
 import { getSelectionRange } from '@testing-library/user-event/dist/utils';
-import React, { useState } from 'react';
-// import App from './App';
 
 function SiteSelect({ site, setSite }) {
 	function handleChange(event) {
@@ -33,10 +31,8 @@ function SiteSelect({ site, setSite }) {
 					name: res.value.timeSeries[0].sourceInfo.siteName,
 
 					latitude:
-						Math.round(
-							res.value.timeSeries[0].sourceInfo.geoLocation.geogLocation
-								.latitude * 100
-						) / 100,
+						res.value.timeSeries[0].sourceInfo.geoLocation.geogLocation
+							.latitude,
 
 					longitude:
 						res.value.timeSeries[0].sourceInfo.geoLocation.geogLocation

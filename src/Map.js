@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
+import Header from './Header';
 
 mapboxgl.accessToken =
 	'pk.eyJ1IjoiemFjbWFyY2VuZ2lsbCIsImEiOiJjbDh0ajN0czIwNXhpM3BwODYxbjYwbmhyIn0.odDnWTriSpnbJf3IE8vfrw';
@@ -31,11 +32,23 @@ function Map({ site }) {
 	});
 
 	return (
-		<div className='map-container'>
-			<div ref={mapContainer} className='map' />
-			<div className='sidebar-container'>
+		<div>
+			<div ref={mapContainer} className='map-container' />
+			<div className='sidebar'>
+				<img
+					className='site-image'
+					src='https://media.defense.gov/2021/Jun/15/2002742197/-1/-1/0/210408-A-EO110-1050.JPG'
+					alt=''
+					id='site-img'
+				/>
 				<div>{site.name}</div>
 				<div>Site #: {site.code}</div>
+				<div>
+					Streamflow:
+					{`${site.streamflow} ${site.unitCode}
+				${site.variableDescription}`}
+				</div>
+				<div>Date/Time: {site.dateTime}</div>
 				<div>
 					Location: {site.latitude}, {site.longitude}
 				</div>

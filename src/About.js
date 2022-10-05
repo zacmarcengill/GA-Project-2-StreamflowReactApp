@@ -1,17 +1,15 @@
 import React from 'react';
-import Header from './Header';
 
 function About(props) {
 	return (
-		<div>
-			<Header />
-			<h2>
-				This app was created by Zac Marcengill as Project #2 for General
-				Assembly Software Engineering Bootcamp. Developed in React with Mapbox
-				integration, this app uses data from USGS (U.S. Geological Survey) web
-				resources API that provides up-to-date river data.
-			</h2>
-		</div>
+		<footer className='footer'>
+			<h6 className='about'>
+				This is an app created by Zac Marcengill as a project submission during
+				the General Assembly Software Engineering Bootcamp. Developed with
+				React, Mapbox API, and streamflow data from USGS API (U.S. Geological
+				Survey). integrationCopyright 2022
+			</h6>
+		</footer>
 	);
 }
 

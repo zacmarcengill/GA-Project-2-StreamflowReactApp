@@ -5,6 +5,7 @@ import Header from './Header';
 import SiteSelect from './SiteSelect';
 import Map from './Map';
 import Data from './Data';
+import About from './About';
 
 function App() {
 	const initialState = {
@@ -28,7 +29,7 @@ function App() {
 			</header>
 			<div>
 				<Map site={site} />
-				<Data site={site} />
+				<About />
 			</div>
 		</>
 	);
