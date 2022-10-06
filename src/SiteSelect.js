@@ -63,7 +63,7 @@ function SiteSelect({ site, setSite }) {
 					<option value='06719505'>CLEAR CREEK</option>
 					<option value='07081200'>ARKANSAS RIVER</option>
 					<option value='09036000'>WILLIAMS FORK</option>
-					<option value='400453105554200'>FRASER RIVER</option>
+					<option value='06718550'>NORTH CLEAR CREEK</option>
 				</select>
 				<button type='submit'>Submit</button>
 			</label>

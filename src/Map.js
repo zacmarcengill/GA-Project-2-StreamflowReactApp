@@ -13,36 +13,8 @@ function Map({ site, setSite }) {
 	const [lat, setLat] = useState(35.9);
 	const [zoom, setZoom] = useState(6);
 
-	const geojson = {
-		type: 'FeatureCollection',
-		features: [
-			{
-				type: 'Feature',
-				geometry: {
-					type: 'Point',
-					coordinates: [-77.032, 38.913],
-				},
-				properties: {
-					title: 'Mapbox',
-					description: 'Washington, D.C.',
-				},
-			},
-			{
-				type: 'Feature',
-				geometry: {
-					type: 'Point',
-					coordinates: [-122.414, 37.776],
-				},
-				properties: {
-					title: 'Mapbox',
-					description: 'San Francisco, California',
-				},
-			},
-		],
-	};
-
 	useEffect(() => {
-		if (map.current) return; // initialize map only once
+		if (map.current) return;
 		map.current = new mapboxgl.Map({
 			container: mapContainer.current,
 			style: 'mapbox://styles/mapbox/outdoors-v11',
@@ -52,7 +24,7 @@ function Map({ site, setSite }) {
 	});
 
 	useEffect(() => {
-		if (!map.current) return; // wait for map to initialize
+		if (!map.current) return;
 		map.current.on('move', () => {
 			setLng(map.current.getCenter().lng.toFixed(4));
 			setLat(map.current.getCenter().lat.toFixed(4));
