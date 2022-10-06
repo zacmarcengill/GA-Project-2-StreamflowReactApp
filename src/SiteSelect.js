@@ -59,6 +59,11 @@ function SiteSelect({ site, setSite }) {
 					<option value='03424860'>CANEY FORK</option>
 					<option value='03582000'>ELK RIVER</option>
 					<option value='03596000'>DUCK RIVER</option>
+					<option value='03418420'>CUMBERLAND RIVER</option>
+					<option value='06719505'>CLEAR CREEK</option>
+					<option value='07081200'>ARKANSAS RIVER</option>
+					<option value='09036000'>WILLIAMS FORK</option>
+					<option value='400453105554200'>FRASER RIVER</option>
 				</select>
 				<button type='submit'>Submit</button>
 			</label>
