@@ -52,7 +52,7 @@ function SiteSelect({ site, setSite }) {
 	}
 
 	return (
-		<form onSubmit={handleSubmit}>
+		<form onSubmit={handleSubmit} className='select-box'>
 			<label htmlFor='site-select'>
 				Select Location:
 				<select onChange={handleChange} className='site-select'>
