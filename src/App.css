@@ -140,7 +140,7 @@
 		width: 100vw;
 		height: 100vh;
 		display: grid;
-		grid-template-columns: 10px 1fr 1fr 1fr 10px;
+		grid-template-columns: 10px 1fr 2fr 1fr 10px;
 		grid-template-rows: 30px 1fr 1fr 6fr 1fr 35px;
 	}
 
@@ -221,6 +221,8 @@
 	}
 
 	.sidebar {
+		width: 50vw;
+		height: 260px;
 		background-color: rgba(255, 255, 255, 0.926);
 		color: rgb(85, 85, 85);
 		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
@@ -234,7 +236,7 @@
 		border: 1px solid rgba(188, 188, 188, 0.888);
 		box-shadow: 3px 3px 3px rgba(188, 188, 188, 0.888);
 		z-index: 1;
-		grid-column: 2 / span 3;
+		grid-column: 3;
 		grid-row: 5;
 	}
 
@@ -260,7 +262,7 @@
 	}
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
 	/* desktop */
 	* {
 		padding: 0;
@@ -353,7 +355,7 @@
 
 	.sidebar {
 		width: 50vw;
-		height: 240px;
+		height: 260px;
 		background-color: rgba(255, 255, 255, 0.926);
 		color: rgb(85, 85, 85);
 		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
