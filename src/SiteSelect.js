@@ -57,14 +57,15 @@ function SiteSelect({ site, setSite }) {
 	return (
 		<form onSubmit={handleSubmit} className='form-container'>
 			<label htmlFor='site-select'>
-				Choose Location:
+				Select Location:
+				<br />
 				<select onChange={handleChange} name='site-select' id='site-select'>
-					<option value='03424860'>CANEY FORK AT STONEWALL</option>
-					<option value='03582000'>ELK RIVER ABOVE FAYETTEVILLE, TN</option>
-					<option value='03596000'>DUCK RIVER BELOW MANCHESTER, TN</option>
+					<option value='03424860'>CANEY FORK</option>
+					<option value='03582000'>ELK RIVER</option>
+					<option value='03596000'>DUCK RIVER</option>
 				</select>
+				<button type='submit'>Submit</button>
 			</label>
-			<button type='submit'>Submit</button>
 		</form>
 	);
 }
