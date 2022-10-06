@@ -66,6 +66,9 @@ function SiteSelect({ site, setSite }) {
 				</select>
 				<button type='submit'>Submit</button>
 			</label>
+			<div>
+				<h6 className='instructions'>Submit to Update Data</h6>
+			</div>
 		</form>
 	);
 }
