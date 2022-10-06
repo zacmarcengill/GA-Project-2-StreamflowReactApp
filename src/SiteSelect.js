@@ -2,12 +2,10 @@ import React from 'react';
 
 function SiteSelect({ site, setSite }) {
 	function handleChange(event) {
-		console.log('handleChange Ran!');
 		setSite({ ...site, code: event.target.value });
 	}
 
 	function handleSubmit(event) {
-		console.log('handleSubmit Ran!');
 		event.preventDefault();
 		getSite();
 	}
@@ -47,7 +45,6 @@ function SiteSelect({ site, setSite }) {
 
 					dateTime: res.value.timeSeries[0].values[0].value[0].dateTime,
 				});
-				console.log('Success! API date retrieved!');
 			})
 			.catch((err) => {
 				console.log('something went wrong...', err);
@@ -55,11 +52,10 @@ function SiteSelect({ site, setSite }) {
 	}
 
 	return (
-		<form onSubmit={handleSubmit} className='form-container'>
+		<form onSubmit={handleSubmit}>
 			<label htmlFor='site-select'>
 				Select Location:
-				<br />
-				<select onChange={handleChange} name='site-select' id='site-select'>
+				<select onChange={handleChange} className='site-select'>
 					<option value='03424860'>CANEY FORK</option>
 					<option value='03582000'>ELK RIVER</option>
 					<option value='03596000'>DUCK RIVER</option>

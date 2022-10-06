@@ -11,7 +11,7 @@ function Map({ site, setSite }) {
 	const map = useRef(null);
 	const [lng, setLng] = useState(-86);
 	const [lat, setLat] = useState(35.9);
-	const [zoom, setZoom] = useState(7);
+	const [zoom, setZoom] = useState(6);
 
 	const geojson = {
 		type: 'FeatureCollection',
@@ -76,19 +76,16 @@ function Map({ site, setSite }) {
 					alt=''
 					id='site-img'
 				/>
-				<div>{site.name}</div>
-				<div>Site #: {site.code}</div>
-				<div>
+				<div className='site-name'>{site.name}</div>
+				<div className='site-code'>Site #: {site.code}</div>
+				<div className='streamflow'>
 					Streamflow:
 					{`${site.streamflow} ${site.unitCode}
 					${site.variableDescription}`}
 				</div>
-				<div>Date/Time: {site.dateTime}</div>
-				<div>
+				<div className='date-time'>Date/Time: {site.dateTime}</div>
+				<div className='location'>
 					Location: {site.latitude}, {site.longitude}
-				</div>
-				<div>
-					Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
 				</div>
 				<About />
 			</div>

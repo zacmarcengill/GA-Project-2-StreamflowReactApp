@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
 import Map from './Map';
-import mapboxgl from 'mapbox-gl';
 
 function App() {
 	const initialState = {
